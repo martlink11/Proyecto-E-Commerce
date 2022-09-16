@@ -221,3 +221,23 @@ a.custom-card:hover {
   text-align: center;
   display: block;
 }
+
+#NewComment {
+  height: 100px;
+  width: 500px;
+}
+
+#puntaje {
+  width: 250px;
+  height: 50px;
+}
+
+#agregarComentario {
+  height: 65px;
+  width: 150px;
+  margin-left: 60px;
+}
+
+#comTitle {
+  margin-top: 100px;
+}

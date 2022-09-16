@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -37,9 +38,33 @@
     </div>
   </nav>
   <main>
+    <div class="container" id="informacion">
+    </div>
     <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+      <div>
+        <div class="text-center p-4">
+          <h4>Imagenes Ilustrativas</h4>
+        </div>
+        <ul class="preview-thumbnail nav nav-tabs" id="imagenes">
+        </ul>
+      </div>
+      <div class="text-center p-4">
+        <h4 id="comTitle">Comentarios sobre el producto</h4>
+      </div>
+      <div id="comentarios">
+      </div>
+      <div class="row mt-4 g-3">
+        <label for="NewComment">Opinion sobre el producto:</label>
+        <textarea name="opinion" id="NewComment" cols="30" rows="10"></textarea>
+        <label for="puntuacion">Puntaje:</label>
+        <select name="puntuacion" id="puntaje">
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+        <button type="button" class="btn btn-primary my-3" id="agregarComentario">Agregar Comentario</button>
       </div>
     </div>
   </main>
@@ -64,6 +89,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+
 </body>
 
 </html>

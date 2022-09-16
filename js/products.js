@@ -7,6 +7,12 @@ let cantidadMinima = undefined;
 let cantidadMaxima = undefined;
 
 
+
+function setProductID(id) {
+    localStorage.setItem("productID", id);
+    window.location = "product-info.html"
+}
+
 let arregloProductos = [];
     
     
@@ -20,7 +26,7 @@ let arregloProductos = [];
             ((cantidadMaxima == undefined) || (cantidadMaxima != undefined && parseInt(productos.cost) <= cantidadMaxima))){
 
             htmlContentToAppend += `
-            <div class="list-group-item list-group-item-action">
+            <div onclick="setProductID(` + productos.id + ` )" class="list-group-item list-group-item-action">
                 <div class="row">
                     <div class="col-3">
                         <img src="` + productos.image + `" alt="product image" class="img-thumbnail">
@@ -42,6 +48,7 @@ let arregloProductos = [];
             document.getElementById("productos").innerHTML = htmlContentToAppend; 
         }
         }
+
 
 
         
@@ -115,17 +122,6 @@ document.getElementById("sortByCount").addEventListener("click", function(){
     sortAndShowProducts(ORDER_BY_SOLD_COUNT);
 });
 
-document.getElementById("clearRangeFilter").addEventListener("click", function(){
-    document.getElementById("rangeFilterCountMin").value = "";
-    document.getElementById("rangeFilterCountMax").value = "";
-
-    cantidadMinima = undefined;
-    cantidadMaxima = undefined;
-
-    mostrarProductos(arregloProductos) ;
-});
-
-
 document.getElementById("rangeFilterCount").addEventListener("click", function(){
     cantidadMinima = document.getElementById("rangeFilterCountMin").value;
     cantidadMaxima = document.getElementById("rangeFilterCountMax").value;
@@ -143,7 +139,15 @@ document.getElementById("rangeFilterCount").addEventListener("click", function()
     else{
         cantidadMaxima = undefined;
     }
-    console.log(arregloProductos);
     mostrarProductos(arregloProductos);
 });
 
+document.getElementById("clearRangeFilter").addEventListener("click", function(){
+    document.getElementById("rangeFilterCountMin").value = "";
+    document.getElementById("rangeFilterCountMax").value = "";
+
+    cantidadMinima = undefined;
+    cantidadMaxima = undefined;
+
+    mostrarProductos(arregloProductos) ;
+});
