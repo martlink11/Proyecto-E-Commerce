@@ -15,17 +15,6 @@ document.addEventListener("DOMContentLoaded", function(){
         window.location = "products.html"
     });
 
-    if (localStorage.getItem("login") === null) {
-        Swal.fire({
-            icon:'warning',
-            title:'Debe Loguearse',
-            timer:1500})
-            setTimeout(" window.location.href = 'login.html'",2000);
-    } else {
-        document.getElementById("perfil").innerHTML = localStorage.getItem("login");
-}
-    document.getElementById("cerrarSesion").addEventListener("click", () => {
-        localStorage.removeItem("login");
-    })
+    
 
 });
