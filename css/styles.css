@@ -248,3 +248,24 @@ a.custom-card:hover {
 #carrusel {
   margin-left: 250px;
 }
+
+#cart-header {
+  
+  margin-top: 50px;
+}
+#cart-title {
+  margin-top: 75px;
+}
+
+#botonCarrito{
+  display: flex;
+  justify-content: left;
+  margin-top: 50px;
+}
+
+#cart-form  h5{
+  margin: 50px;
+}
+.tipo-de-envio{
+  margin: 20px;
+}

@@ -7,6 +7,7 @@ const boton = document.getElementById("ingreso")
 formulario.addEventListener("submit", (e) => {
     e.preventDefault()
     validarCampos()
+    localStorage.setItem("UserID","25801")
 } 
 )
 

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
 function mostrarInfo() {
-    let contenidoHTML = "";
+    let contenidoHTML = ``;
     contenidoHTML += ` 
     <div class="text-center p-4"> 
         <h1>` + infoProductos.name + ` </h1>
@@ -71,6 +71,7 @@ function mostrarInfo() {
 </div>
 `
 document.getElementById("carrusel").innerHTML = imagenesDelProducto ;
+agregarAlCarrito.setAttribute("id",infoProductos.id)
 }
 
 
@@ -156,6 +157,7 @@ function mostarComentarios() {
 </div>
         
         `
+        
     }
     document.getElementById("comentarios").innerHTML += contenido;
 
